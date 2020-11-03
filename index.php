@@ -321,7 +321,31 @@ require __DIR__ .  '/vendor/autoload.php';
                                             <input type="hidden" name="price" value="10000">
                                             <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
+                                            <?php
+                                            // SDK de Mercado Pago
+                                            require __DIR__ .  '/vendor/autoload.php';
+
+                                            // Agrega credenciales
+                                            MercadoPago\SDK::setAccessToken('PROD_ACCESS_TOKEN');
+
+                                            // Crea un objeto de preferencia
+                                            $preference = new MercadoPago\Preference();
+
+                                            // Crea un ítem en la preferencia
+                                            $item = new MercadoPago\Item();
+                                            $item->title = 'Mi producto';
+                                            $item->quantity = 1;
+                                            $item->unit_price = 75.56;
+                                            $preference->items = array($item);
+                                            $preference->save();
+                                            ?>
                                         </form>
+
+
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="as-producttile large-4 small-6 group-1">
