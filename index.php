@@ -339,6 +339,11 @@ require __DIR__ .  '/vendor/autoload.php';
                                             $preference->items = array($item);
                                             $preference->save();
                                             ?>
+                                            <script
+  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+  data-preference-id="<?php echo $preference->id; ?>">
+</script>
+
                                         </form>
 
 
