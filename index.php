@@ -333,25 +333,13 @@ require __DIR__ .  '/vendor/autoload.php';
                                             $preference->items = array($item);
                                             $preference->save();
                                             ?>
-                                        <form action="/detail.php" method="get">
-                                            <input type="hidden" name="img" value="./assets/l6g6.jpg">
-                                            <input type="hidden" name="title" value="LG G6">
-                                            <input type="hidden" name="price" value="10000">
-                                            <input type="hidden" name="unit" value="1">
-                                            <script
-  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-  data-preference-id="<?php echo $preference->id; ?>">
-</script>
-
-
-                                        </form>
-
+                                        <form>
                                             
-
-
-
-
-
+                                            <script
+                                              src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+                                              data-preference-id="<?php echo $preference->id; ?>">
+                                            </script>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="as-producttile large-4 small-6 group-1">
