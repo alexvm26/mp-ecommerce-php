@@ -42,7 +42,10 @@
 
 
 <body class="as-theme-light-heroimage">
-
+<?php
+// SDK de Mercado Pago
+require __DIR__ .  '/vendor/autoload.php';
+?>
     <div class="stack">
         
         <div class="as-search-wrapper" role="main">
