@@ -321,7 +321,10 @@ require __DIR__ .  '/vendor/autoload.php';
                                             <input type="hidden" name="price" value="10000">
                                             <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
-                                            <?php
+                                            
+
+                                        </form>
+                                        <?php
                                             // SDK de Mercado Pago
                                             require __DIR__ .  '/vendor/autoload.php';
 
@@ -343,9 +346,6 @@ require __DIR__ .  '/vendor/autoload.php';
   src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
   data-preference-id="<?php echo $preference->id; ?>">
 </script>
-
-                                        </form>
-
 
 
 
