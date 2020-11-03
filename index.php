@@ -312,7 +312,7 @@ require __DIR__ .  '/vendor/autoload.php';
                                                 </h3>
                                             </div>
                                             <div class="as-price-currentprice as-producttile-currentprice">
-                                                $10.000
+                                                $7.00
                                             </div>
                                         </div>
                                         <?php
@@ -327,14 +327,13 @@ require __DIR__ .  '/vendor/autoload.php';
 
                                             // Crea un ítem en la preferencia
                                             $item = new MercadoPago\Item();
-                                            $item->title = 'Mi producto';
+                                            $item->title = 'LG G6';
                                             $item->quantity = 1;
-                                            $item->unit_price = 75.56;
+                                            $item->unit_price = 7.00;
                                             $preference->items = array($item);
                                             $preference->save();
                                             ?>
                                         <form>
-                                            
                                             <script
                                               src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                               data-preference-id="<?php echo $preference->id; ?>">
